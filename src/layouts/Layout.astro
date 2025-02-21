@@ -1,22 +1,92 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  keywords?: string[];
+  noIndex?: boolean;
+}
+const defaultKeywords = [
+  "Programación",
+  "Desarrollo web",
+  "Desarrollo de aplicaciones",
+  "Creacion de paginas web",
+  "Diseño de paginas web",
+  "Desarrollo de software",
+];
+
+const {
+  title = "Peterson Sena | Desarrollo Web",
+  description = "Desarrollo web y diseño de paginas web",
+  image = '/favicon.svg',
+  noIndex = false,
+  keywords = defaultKeywords,
+} = Astro.props;
+
+// Configuración de URLs base
+const siteUrl = 'https://petersonsena.com';
+const canonicalURL = new URL(Astro.url.pathname, siteUrl);
+const imageUrl = new URL(image, siteUrl).toString();
+import '../styles/global.css';
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+      <!-- SEO Básico -->
+	  <title>{title}</title>
+	  <meta name="description" content={description} />
+	  <meta name="keywords" content={keywords.join(', ')} />
+	  <meta name="author" content="IS INSTALACIONES" />
+	  <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
+	  <meta name="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow"} />
+
+	     <!-- Geolocalización -->
+		 <meta name="geo.region" content="ES-CT" />
+		 <meta name="geo.placename" content="Barcelona" />
+		 <meta name="geo.position" content="41.3851;2.1734" />
+		 <meta name="ICBM" content="41.3851, 2.1734" />
+		 
+		 <!-- Idioma y región -->
+		 <meta property="og:locale" content="es_ES" />
+		 <link rel="alternate" hreflang="es-ES" href={canonicalURL} />
+		 
+		 <!-- Canonical URL -->
+		 <link rel="canonical" href={canonicalURL} />
+		 
+		 <!-- Favicon -->
+		 <link rel="icon" type="image/svg+xml" href="/favicon.svg" class="rounded-full" />
+		 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		 <link rel="manifest" href="/site.webmanifest" />
+		 
+		 <!-- Open Graph / Facebook -->
+		 <meta property="og:type" content="website" />
+		 <meta property="og:url" content={canonicalURL} />
+		 <meta property="og:title" content={title} />
+		 <meta property="og:description" content={description} />
+		 <meta property="og:image" content={imageUrl} />
+		 <meta property="og:site_name" content="Peterson Sena" />
+	 
+		 <!-- Twitter -->
+		 <meta name="twitter:card" content="summary_large_image" />
+		 <meta name="twitter:url" content={canonicalURL} />
+		 <meta name="twitter:title" content={title} />
+		 <meta name="twitter:description" content={description} />
+		 <meta name="twitter:image" content={imageUrl} />
+  </head>
+  <body>
+    <slot />
+	<script
+	defer
+	src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"
+  ></script>
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+
