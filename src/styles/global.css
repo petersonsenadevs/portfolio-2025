@@ -1,1 +1,64 @@
 @import "tailwindcss";
+:root {
+    color-scheme: light;
+    
+    /* Primary Colors */
+    --color-primary: #40B4C7;
+    --color-primary-hover: #2C7F8C;
+    --color-primary-light: #7DD3E0;
+    --color-primary-dark: #1A4B53;
+    
+    /* Background Colors */
+    --color-background: #FFFFFF;
+    --color-background-alt: #F3F4F6;
+    --color-background-hover: #e5e8eb;
+    
+    /* Text Colors */
+    --color-text: #1f3637;
+    --color-text-light: #4B5563;
+    --color-text-lighter: #6B7280;
+    
+    /* Border Colors */
+    --color-border: #0075a7;
+    --color-border-hover: #1971cf;
+    
+    /* Scrollbar Colors */
+    --scrollbar-color: var(--color-primary);
+    --scrollbar-hover: var(--color-primary-hover);
+    
+    /* Shadow Colors */
+    --color-shadow: rgba(210, 13, 13, 0.1);
+    --color-shadow-strong: rgba(0, 0, 0, 0.25);
+  }
+  
+  :root.dark {
+    color-scheme: dark;
+    
+    /* Primary Colors */
+    --color-primary: #7DD3E0;
+    --color-primary-hover: #5BA3AD;
+    --color-primary-light: #A5E4ED;
+    --color-primary-dark: rgb(4, 104, 119);
+    
+    /* Background Colors */
+    --color-background: #111827;
+    --color-background-alt: #1F2937;
+    --color-background-hover: #374151;
+    
+    /* Text Colors */
+    --color-text: #F9FAFB;
+    --color-text-light: #E5E7EB;
+    --color-text-lighter: #D1D5DB;
+    
+    /* Border Colors */
+    --color-border: #374151;
+    --color-border-hover: #4B5563;
+    
+    /* Scrollbar Colors */
+    --scrollbar-color: var(--color-primary);
+    --scrollbar-hover: var(--color-primary-dark);
+    
+    /* Shadow Colors */
+    --color-shadow: rgba(0, 0, 0, 0.3);
+    --color-shadow-strong: rgba(0, 0, 0, 0.5);
+  }
