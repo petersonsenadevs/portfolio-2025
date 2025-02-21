@@ -27,11 +27,12 @@ const {
 const siteUrl = 'https://petersonsena.com';
 const canonicalURL = new URL(Astro.url.pathname, siteUrl);
 const imageUrl = new URL(image, siteUrl).toString();
+import Navigation from '../components/Navigation.astro';
 import '../styles/global.css';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -39,6 +40,10 @@ import '../styles/global.css';
     <meta name="generator" content={Astro.generator} />
       <!-- SEO Básico -->
 	  <title>{title}</title>
+	  <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+    />
 	  <meta name="description" content={description} />
 	  <meta name="keywords" content={keywords.join(', ')} />
 	  <meta name="author" content="IS INSTALACIONES" />
@@ -79,13 +84,39 @@ import '../styles/global.css';
 		 <meta name="twitter:title" content={title} />
 		 <meta name="twitter:description" content={description} />
 		 <meta name="twitter:image" content={imageUrl} />
+<!-- Theme -->
+		 <script is:inline>
+			const theme = localStorage.getItem("theme") || "system";
+			const isDark =
+			  theme === "dark" ||
+			  (theme === "system" &&
+				window.matchMedia("(prefers-color-scheme: dark)").matches);
+	  
+			if (isDark) {
+			  document.documentElement.classList.add("dark");
+			}
+			document.documentElement.setAttribute("data-theme", theme);
+		  </script>
+
   </head>
   <body>
+	<Navigation />
     <slot />
+
+	<!-- Preloader -->
+	<script>
+		document.documentElement.classList.add("preload");
+		window.addEventListener("load", () => {
+		  setTimeout(() => {
+			document.documentElement.classList.remove("preload");
+		  }, 200);
+		});
+	  </script>
 	<script
 	defer
 	src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"
   ></script>
+  
   </body>
 </html>
 

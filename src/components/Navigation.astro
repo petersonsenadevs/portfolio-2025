@@ -1,13 +1,16 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
+import LanguageToggle from "./LanguageToggle.astro";
+import {translations} from "../i18n/translations";
+
 
 const navItems = [
-  { href: 'home', text: { en: 'Home', es: 'Inicio' } },
-  { href: 'about', text: { en: 'About', es: 'Sobre Mí' } },
-  { href: 'services', text: { en: 'Services', es: 'Servicios' } },
-  { href: 'projects', text: { en: 'Projects', es: 'Proyectos' } },
-  { href: 'skills', text: { en: 'Skills', es: 'Habilidades' } },
-  { href: 'contact', text: { en: 'Contact', es: 'Contacto' } },
+  { href: 'home', text: { es: translations.navigation.home.es, en: translations.navigation.home.en } },
+  { href: 'about', text: { es: translations.navigation.about.es, en: translations.navigation.about.en  } },
+  { href: 'services', text: { es: translations.navigation.services.es, en: translations.navigation.services.en } },
+  { href: 'projects', text: { es: translations.navigation.projects.es, en: translations.navigation.projects.en } },
+  { href: 'skills', text: { es: translations.navigation.skills.es, en: translations.navigation.skills.en } },
+  { href: 'contact', text: { es: translations.navigation.contact.es, en: translations.navigation.contact.en} },
 ];
 
 
@@ -31,8 +34,8 @@ const navItems = [
               data-section={item.href}
               class="nav-link px-3 py-2 rounded-md text-sm font-medium text-text hover:text-[color:var(--color-primary)] transition-colors duration-300"
             >
-              <span class="en">{item.text.en}</span>
-              <span class="es hidden">{item.text.es}</span>
+              <span class="en">{item.text.es}</span>
+              <span class="es hidden">{item.text.en}</span>
             </button>
           ))}
         </div>
@@ -41,12 +44,13 @@ const navItems = [
       <!-- Theme and Language Toggles -->
       <div class="flex items-center gap-2">
         <ThemeToggle />
+        <LanguageToggle />
        
         <!-- Mobile menu button -->
         <button
           type="button"
           id="mobile-menu-button"
-          class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-text hover:text-primary"
+          class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-text hover:text-[color:var(--color-primary)] transition-colors duration-300"
           aria-controls="mobile-menu"
           aria-expanded="false"
         >
@@ -77,10 +81,10 @@ const navItems = [
       {navItems.map((item) => (
         <button
           data-section={item.href}
-          class="nav-link block w-full text-left px-3 py-2 rounded-md text-base font-medium text-text hover:text-primary"
+          class="nav-link block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:text-[color:var(--color-primary)] transition-colors duration-300"
         >
-          <span class="en">{item.text.en}</span>
-          <span class="es hidden">{item.text.es}</span>
+          <span class="en">{item.text.es}</span>
+          <span class="es hidden">{item.text.en}</span>
         </button>
       ))}
     </div>
