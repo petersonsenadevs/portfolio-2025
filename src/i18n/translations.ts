@@ -1,3 +1,5 @@
+import Footer from "../components/sections/Footer.astro";
+
 export const translations = {
   navigation: {
     home: {
@@ -26,6 +28,12 @@ export const translations = {
     },
   },
 
+  footer :{
+    rights: {
+      en: "All rights reserved",
+      es: "Todos los derechos reservados",
+    }
+  }
     
 
 } as const;
