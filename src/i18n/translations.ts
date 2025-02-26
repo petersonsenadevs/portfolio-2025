@@ -65,6 +65,56 @@ export const translations = {
     },
   },
 
+  services: {
+    title_services: {
+      en: "My Services",
+      es: "Mis servicios",
+    },
+
+    services_stack: {
+      web: {
+        title: {
+          en: "Web Development",
+          es: "Desarrollo Web",
+        },
+        description: {
+          en: "Creating responsive and modern websites using the latest technologies.",
+          es: "Creación de sitios web modernos y responsivos.",
+        },
+      },
+      mobile: {
+        title: {
+          en: "Mobile Development",
+          es: "Desarrollo Móvil",
+        },
+        description: {
+          en: "Building mobile applications for Android platforms.",
+          es: "Creación de aplicaciones móviles para Android.",
+        },
+      },
+      backend: {
+        title: {
+          en: "Backend Development",
+          es: "Desarrollo Backend",
+        },
+        description: {
+          en: "Building robust and scalable server-side applications.",
+          es: "Creación de aplicaciones backend robustas y escalables.",
+        },
+      },
+      design: {
+        title: {
+          en: "Design",
+          es: "Diseño",
+        },
+        description: {
+          en: "Creating visually stunning and user-friendly interfaces.",
+          es: "Creación de interfaces de usuario atractivas y intuitivas.",
+        },
+      },
+    },
+  },
+
   footer :{
     rights: {
       en: "All rights reserved",
