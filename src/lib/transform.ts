@@ -1,4 +1,4 @@
-import type { Experience, ExperienceFromDB, Project, ProjectFromDB } from "./types";
+import type { Experience, ExperienceFromDB, Project, ProjectFromDB, Skill, SkillFromDB } from "./types";
 
 export function transformExperience(experience: ExperienceFromDB): Experience {
   return {
@@ -46,5 +46,18 @@ export function transformProject(project: ProjectFromDB): Project {
     })),
     demoUrl: project.demo_url,
     githubUrl: project.github_url
+  };
+}
+
+export function transformSkill(skill: SkillFromDB): Skill {
+  return {
+    id: skill.id,
+    name: skill.name,
+    icon: skill.icon_url,
+    category: skill.category,
+    description: {
+      en: skill.description_en,
+      es: skill.description_es
+    }
   };
 }

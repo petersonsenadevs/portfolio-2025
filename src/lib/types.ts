@@ -53,7 +53,7 @@ export interface Skill {
     en: string;
     es: string;
   };
-  powerLevel: number;
+
 }
 
 
@@ -65,7 +65,7 @@ export interface SkillFromDB {
   category: string;
   description_en: string;
   description_es: string;
-  power_level: number;
+
 }
 
 export interface Experience {
