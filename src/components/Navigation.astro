@@ -7,6 +7,7 @@ import {translations} from "../i18n/translations";
 const navItems = [
   { href: 'home', text: { es: translations.navigation.home.es, en: translations.navigation.home.en } },
   { href: 'about', text: { es: translations.navigation.about.es, en: translations.navigation.about.en  } },
+  { href: 'experience', text: { es: translations.navigation.experience.es, en: translations.navigation.experience.en } },
   { href: 'services', text: { es: translations.navigation.services.es, en: translations.navigation.services.en } },
   { href: 'projects', text: { es: translations.navigation.projects.es, en: translations.navigation.projects.en } },
   { href: 'skills', text: { es: translations.navigation.skills.es, en: translations.navigation.skills.en } },
@@ -32,10 +33,10 @@ const navItems = [
           {navItems.map((item) => (
             <button
               data-section={item.href}
-              class="nav-link px-3 py-2 rounded-md text-sm font-medium text-[color:var(--color-primary)] hover:text-[color:var(--color-text)] transition-colors duration-300"
+              class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-[color:var(--color-primary)]  transition-colors duration-300"
             >
-              <span class="en">{item.text.es}</span>
-              <span class="es hidden">{item.text.en}</span>
+              <span class="es">{item.text.es}</span>
+              <span class="en hidden">{item.text.en}</span>
             </button>
           ))}
         </div>
@@ -83,8 +84,8 @@ const navItems = [
           data-section={item.href}
           class="nav-link block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:text-[color:var(--color-primary)] transition-colors duration-300"
         >
-          <span class="en">{item.text.es}</span>
-          <span class="es hidden">{item.text.en}</span>
+          <span class="es">{item.text.es}</span>
+          <span class="en hidden">{item.text.en}</span>
         </button>
       ))}
     </div>
@@ -152,4 +153,4 @@ const navItems = [
   window.addEventListener('scroll', updateActiveSection);
   // Initial update
   updateActiveSection();
-</script>
+</script>]
