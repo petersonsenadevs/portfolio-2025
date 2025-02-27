@@ -14,6 +14,10 @@ export const translations = {
       en: "Services",
       es: "Servicios",
     },
+    experience: {
+      en: "Experience",
+      es: "Experiencia",
+    },
     projects: {
       en: "Projects",
       es: "Proyectos",
@@ -112,6 +116,16 @@ export const translations = {
           es: "Creación de interfaces de usuario atractivas y intuitivas.",
         },
       },
+    },
+  },
+  projects : {
+    title : {
+      en: "My Projects",
+      es: "Mis Proyectos",
+    },
+    subtitle: {
+      en: "Some of my recent work",
+      es: "Algunos de mis trabajos recientes",
     },
   },
 
