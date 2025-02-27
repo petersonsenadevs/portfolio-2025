@@ -135,6 +135,35 @@ export const translations = {
       es: "Todos los derechos reservados",
     }
   }
+,
+  contact: {
+    title: {
+      en: "Contact Me",
+      es: "Contáctame",
+    },
+    subtitle: {
+      en: "Let's work together",
+      es: "Trabajemos juntos",
+    },
+    form: {
+      name: {
+        en: "Name",
+        es: "Nombre",
+      },
+      email: {
+        en: "Email",
+        es: "Correo electrónico",
+      },
+      message: {
+        en: "Message",
+        es: "Mensaje",
+      },
+      submit: {
+        en: "Send Message",
+        es: "Enviar Mensaje",
+      },
+    },
+  },
     
 
 } as const;
