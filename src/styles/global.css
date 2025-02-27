@@ -154,9 +154,18 @@ body {
   transform: scale(1.1);
 }
 
+.skill-button{
+  display: flex;
+  flex-direction: column;
+}
+
 .skill-button img {
   transition: all 0.2s ease-in-out;
+  width: 2rem !important; /* 8px * 2 = 16px */
+  height: 2rem !important;
+  object-fit: contain;
 }
+
 
 /* Project Cards */
 .project-card {
