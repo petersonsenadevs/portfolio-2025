@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 import { getExperiences } from '../../lib/api';
 import { transformExperience } from '../../lib/transform';
 
-
+export const prerender = false; 
 
 export const GET: APIRoute = async () => {
   try {

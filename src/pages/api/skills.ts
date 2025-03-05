@@ -2,6 +2,7 @@ import type { APIRoute } from 'astro';
 import { supabase } from '../../lib/supabase';
 import {transformSkill} from '../../lib/transform';
 
+export const prerender = false; 
 
 export const GET: APIRoute = async () => {
   try {

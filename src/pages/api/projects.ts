@@ -2,6 +2,8 @@ import type { APIRoute } from 'astro';
 import { supabase } from '../../lib/supabase';
 import { transformProject } from '../../lib/transform';
 
+export const prerender = false; // Disable static rendering
+
 export const GET: APIRoute = async () => {
   try {
     const { data: projects, error } = await supabase

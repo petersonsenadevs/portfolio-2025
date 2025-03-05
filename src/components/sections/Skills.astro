@@ -31,7 +31,7 @@ import Modal from '../Modal.astro';
     if (!skillsContainer) return;
 
     try {
-      const response = await fetch('/api/skills');
+      const response = await fetch(`/api/skills??timestamp=${Date.now()}`);
       if (!response.ok) {
         throw new Error('Failed to load skills');
       }

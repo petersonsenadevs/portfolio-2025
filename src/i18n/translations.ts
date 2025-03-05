@@ -59,13 +59,13 @@ export const translations = {
     },
    
     description: {
-      en: "What can I tell you! I am a passionate developer from Dominican Republic, living in Spain. Since I was a child I have been fascinated by technology and programming, and nowadays I enjoy creating web solutions and applications. I'm always learning, exploring new tools and looking to improve in every project. I love taking on challenges and working on innovative ideas.",
-      es: "¡Que os cuento! Soy un apasionado desarrollador de República Dominicana, residente en España. Desde pequeño me ha fascinado la tecnología y la programación, y hoy en día disfruto creando soluciones web y aplicaciones. Siempre estoy aprendiendo, explorando nuevas herramientas y buscando mejorar en cada proyecto. Me encanta asumir desafíos y trabajar en ideas innovadoras",
+      en: "I'm from the Dominican Republic and currently live in Barcelona. Since I was a kid, I’ve always been passionate about technology, audiovisuals, and music. I love discovering how things work and finding ways to improve them. A couple of years ago, I decided to shift my professional path and fully dedicate myself to software development, focusing on scalable architecture, microservices, and process optimization",
+      es: "Soy de República Dominicana y actualmente resido en Barcelona. Desde pequeño, siempre me ha apasionado la tecnología, los audiovisuales y la música. Me encanta descubrir cómo funcionan las cosas y encontrar maneras de mejorarlas. Hace un par de años, decidí dar un giro a mi vida profesional y dedicarme por completo al desarrollo de software, enfocándome en arquitectura escalable, microservicios y optimización de procesos.",
     },
     description2: {
-      en: "I focus on blending technology and creativity to develop efficient and functional solutions. My goal is to ensure that every project not only runs smoothly but also delivers an exceptional user experience.",
+      en: "I enjoy solving problems, writing clean code, and creating efficient solutions. I’m always eager to learn something new and improve with every project.",
       
-      es: "Me enfoco en combinar tecnología y creatividad para desarrollar soluciones eficientes y funcionales. Mi objetivo es asegurar que cada proyecto no solo funcione sin problemas, sino que también ofrezca una experiencia de usuario excepcional.",
+      es: "Disfruto resolviendo problemas, escribiendo código limpio y creando soluciones eficientes. Siempre busco aprender algo nuevo y mejorar en cada proyecto.",
     },
   },
 

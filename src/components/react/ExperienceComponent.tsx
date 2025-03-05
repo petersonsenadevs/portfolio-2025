@@ -25,7 +25,7 @@ const ExperienceComponent: React.FC = () => {
   useEffect(() => {
     const loadExperiences = async () => {
       try {
-        const response = await fetch("/api/experiences");
+        const response = await fetch(`/api/experiences?timestamp=${Date.now()}`);
         if (!response.ok) {
           throw new Error("Failed to load experiences");
         }
